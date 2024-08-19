@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Blur Overlay",
+    "version": "1.0",
+    "description": "Automatically blur the page when the mouse leaves.",
+    "permissions": ["storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "options_page": "options.html",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "action": {
+      "default_popup": "",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+  
